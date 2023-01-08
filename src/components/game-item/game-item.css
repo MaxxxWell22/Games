@@ -1,0 +1,57 @@
+.game-item {
+    font-size: 15px;
+    margin: 28px;
+    align-self: center;
+    text-decoration: none;
+    color: white;
+    width: 320px;
+    height: 380px;
+    background-color: rgb(36, 37, 41);
+    opacity: 0.5;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+}
+
+.game-item:hover {
+    font-size: 20px;
+    background-color: rgb(36, 37, 41);
+    opacity: 0.9;
+    width: 375px;
+    height: 430px;
+    margin: 0px 20px 0px 20px;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.game-item__title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.game-item__genre {
+    margin-top: 7px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-item__details {
+    padding: 10px 20px
+}
+
+.game-item__buy {
+    position: absolute;
+    right: 0;
+    bottom: -12px;
+}
+
+.game-description {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
