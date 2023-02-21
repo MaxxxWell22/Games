@@ -1,15 +1,16 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { GameCover } from "../game-image/game-cover";
-import { GameBuy } from "../game-buy/game-buy";
-import { GameGenre } from "../game-genre/game-genre";
+import { GameCover } from "./game-image/game-cover";
+import { GameBuy } from "./game-buy/game-buy";
+import { GameGenre } from "./game-genre/game-genre";
 import { setCurrentGame } from "../../redux/games/games";
-import './game-item.css'
+import './game-item.css';
 
 export const GameItem = ({ game }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
     const handleClick = (e) => {
         e.preventDefault();
         dispatch(setCurrentGame(game));

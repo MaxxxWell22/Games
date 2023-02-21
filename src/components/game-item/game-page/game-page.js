@@ -1,20 +1,21 @@
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 import { GameGenre } from '../game-genre/game-genre';
 import { GameCover } from '../game-image/game-cover';
 import { GameBuy } from '../game-buy/game-buy';
-import './game-page.css'
+import './game-page.css';
 
 const GamePage = () => {
-    const game = useSelector((state) => state.game.currentGame);
+    const game = useSelector(state => state.game.currentGame);
 
     if (!game) return null
 
     return (
         <div className='game-page'>
             <h1 className='game-page__title'>{game.title}</h1>
-            <div className='game-page__content'>
+            <div className='content'>
                 <div className='game-page__left'>
                     <iframe
+                        className='video'
                         width="95%"
                         height="450px"
                         src={game.video}
@@ -35,7 +36,7 @@ const GamePage = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export { GamePage }

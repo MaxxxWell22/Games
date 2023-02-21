@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux'
 import { calcTotalPrice } from '../../components/Header/utils';
-import { Orderitem } from '../../components/order-item/order-item';
-import './order-page.css'
+import { Orderitem } from '../../components/items-in-cart/order-item/order-item';
 
 const OrderPage = () => {
     const items = useSelector(state => state.cart.itemsInCart);
@@ -9,8 +8,8 @@ const OrderPage = () => {
     if (items.length < 1) {
         return (
             <h1>Ваша корзина пуста</h1>
-        )
-    }
+        );
+    };
 
     return (
         <div className='order-page'>
@@ -25,7 +24,7 @@ const OrderPage = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export { OrderPage }

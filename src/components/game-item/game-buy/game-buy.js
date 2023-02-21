@@ -1,22 +1,22 @@
-import './game-buy.css'
-import {useDispatch, useSelector} from "react-redux";
-import {Button} from "../button/button";
-import {deleteItemFromCart, setItemInCart} from "../../redux/cart/reducer";
+import { useDispatch, useSelector } from "react-redux";
+import { Button } from "../../button/button";
+import { deleteItemFromCart, setItemInCart } from "../../../redux/cart/reducer";
+import './game-buy.css';
 
-export const GameBuy = ({game}) => {
+export const GameBuy = ({ game }) => {
     const dispatch = useDispatch();
     const items = useSelector((state) => state.cart.itemsInCart);
     const isItemInCart = items.some((item) => item.id === game.id);
-    
+
     const handleClick = (e) => {
-        e.stopPropagation()
-        e.preventDefault()
+        e.stopPropagation();
+        e.preventDefault();
         if (isItemInCart) {
             dispatch(deleteItemFromCart(game.id));
         } else {
             dispatch(setItemInCart(game))
-        }
-    }
+        };
+    };
 
     return (
         <div className="game-buy">
@@ -28,8 +28,8 @@ export const GameBuy = ({game}) => {
                 {isItemInCart ? "Убрать из корзины" : "В Корзину"}
             </Button>
         </div>
-    )
-}
+    );
+};
 
 
 

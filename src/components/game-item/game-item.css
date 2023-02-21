@@ -1,5 +1,4 @@
 .game-item {
-    font-size: 15px;
     margin: 28px;
     align-self: center;
     text-decoration: none;
@@ -7,7 +6,7 @@
     width: 320px;
     height: 380px;
     background-color: rgb(36, 37, 41);
-    opacity: 0.5;
+    opacity: 0.6;
     border-radius: 15px;
     cursor: pointer;
     position: relative;
@@ -28,8 +27,11 @@
     -o-transform: scale(1);
 }
 
+b {
+    font-size: calc(18px + 9 * (100vw/1900));
+}
+
 .game-item__title {
-    font-size: 18px;
     font-weight: bold;
 }
 
@@ -54,4 +56,5 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: calc(7px + 9 * (100vw/1900));
 }

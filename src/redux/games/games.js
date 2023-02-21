@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const gamesSlice = createSlice({
     name: 'games',
@@ -12,7 +12,7 @@ const gamesSlice = createSlice({
     }
 });
 
-export const {setCurrentGame} = gamesSlice.actions;
+export const { setCurrentGame } = gamesSlice.actions;
 export default gamesSlice.reducer;
 
 

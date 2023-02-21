@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom';
+import { CartBlock } from '../cart-item/cart-block/cart-block';
 import './header.css';
-import {Link} from 'react-router-dom';
-import {CartBlock} from '../cart-block/cart-block'
 
 export const Header = () => {
     return (
@@ -11,8 +11,8 @@ export const Header = () => {
                 </Link>
             </div>
             <div className="header__cart-btn-wrapper">
-                <CartBlock/>
+                <CartBlock />
             </div>
         </div>
-    )
-}
+    );
+};

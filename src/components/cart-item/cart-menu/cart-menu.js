@@ -1,20 +1,20 @@
-import './cart-menu.css'
-import {calcTotalPrice} from "../Header/utils";
-import { Button } from '../button';
-import {CartItem} from "../cart-item/cart-item"
+import { calcTotalPrice } from "../../Header/utils";
+import { Button } from '../../button/button';
+import { CartItem } from "../cart-item";
+import './cart-menu.css';
 
-export const CartMenu = ({items, onClick}) => {
+export const CartMenu = ({ items, onClick }) => {
     return (
         <div className="cart-menu">
             <div className="cart-menu__games-list">
                 {items.length > 0 ? items.map((game) => (
-                        <CartItem
-                            key={game.title}
-                            price={game.price}
-                            title={game.title}
-                            id={game.id}
-                        />
-                    ))
+                    <CartItem
+                        key={game.title}
+                        price={game.price}
+                        title={game.title}
+                        id={game.id}
+                    />
+                ))
                     : 'Корзина пуста'}
             </div>
             {items.length > 0 ? (<div className="cart-menu_arrange">
@@ -27,8 +27,8 @@ export const CartMenu = ({items, onClick}) => {
                 </Button>
             </div>) : null}
         </div>
-    )
-}
+    );
+};
 
 
 

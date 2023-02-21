@@ -1,6 +1,6 @@
 import './cart-item.css'
 
-export const CartItem = ({title, price, id}) => {
+export const CartItem = ({ title, price }) => {
     return (
         <div className="cart-item">
             <span>{title}</span>
@@ -8,5 +8,5 @@ export const CartItem = ({title, price, id}) => {
                 <span>{price} руб.</span>
             </div>
         </div>
-    )
-}
+    );
+};
