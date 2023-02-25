@@ -1,14 +1,26 @@
 .order-item {
     margin-bottom: 30px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 };
 
 .order-item__cover {
-    width: 300px;
+    width: 200px;
+    height: 50vh;
     margin-right: 30px;
 };
 
+img {
+    height: 190px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 15px;
+}
+
 .order-item__title {
+    margin-left: 25px;
     font-size: 25px;
     font-weight: bold;
 };
@@ -16,5 +28,4 @@
 .order-item__price {
     font-size: 24px;
     font-weight: bold;
-    margin-left: auto;
 };

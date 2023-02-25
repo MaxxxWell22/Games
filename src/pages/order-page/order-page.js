@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { calcTotalPrice } from '../../components/Header/utils';
-import { Orderitem } from '../../components/items-in-cart/order-item/order-item';
+import { OrderItem } from '../../components/items-in-cart/order-item/order-item';
 
 const OrderPage = () => {
     const items = useSelector(state => state.cart.itemsInCart);
@@ -14,11 +14,11 @@ const OrderPage = () => {
     return (
         <div className='order-page'>
             <div className='order-page__left'>
-                {items.map((game) => <Orderitem game={game} />)}
+                {items.map((game) => <OrderItem game={game} />)}
             </div>
             <div className='order-page__right'>
                 <div className='order-page__total-price'>
-                    <span>
+                    <span style={{marginBottom: '20px', fontSize: ''}}>
                         {items.length} товаров на сумму {calcTotalPrice(items)} руб.
                     </span>
                 </div>

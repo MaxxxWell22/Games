@@ -4,7 +4,7 @@ import { deleteItemFromCart } from '../../../redux/cart/reducer';
 import { GameCover } from '../../game-item/game-image/game-cover';
 import './order-item.css';
 
-const Orderitem = ({ game }) => {
+const OrderItem = ({ game }) => {
     const dispatch = useDispatch();
 
     const handleClick = () => {
@@ -13,22 +13,27 @@ const Orderitem = ({ game }) => {
 
     return (
         <div className='order-item'>
-            <div className='order-item__cover'>
-                <GameCover image={game.image} />
+            <div style={{ display: 'flex' }}>   
+                <div className='order-item__cover'>
+                    <img style={{width: 'calc(130px + 9 * (100vw/1900))', height: 'calc(100px + 9 * (100vw/1900))', borderTopLeftRadius: '15px', borderTopRightRadius: '15px'}} className='imageCart' src={game.image} />
+                    {/* <GameCover image={game.image} /> */}
+                </div>
+                <div className='order-item__title'>
+                    <span style={{fontSize: 'calc(15px + 9 * (100vw/1900))'}}>{game.title}</span>
+                </div>
             </div>
-            <div className='order-item__title'>
-                <span>{game.title}</span>
-            </div>
-            <div className='order-item__price'>
-                <span>{game.price}руб.</span>
-                <FiXCircle
-                    size={25}
-                    className='cart-item__delete-icon'
-                    onClick={handleClick}
-                />
+            <div style={{marginLeft: '15px'}}>
+                <div className='order-item__price'>
+                    <span>{game.price}руб.</span>
+                    <FiXCircle
+                        size={25}
+                        className='cart-item__delete-icon'
+                        onClick={handleClick}
+                    />
+                </div>
             </div>
         </div>
     );
 };
 
-export { Orderitem }
+export { OrderItem }

@@ -21,7 +21,7 @@
   },
   {
       background: 'https://images.alphacoders.com/115/thumb-1920-1152016.jpg',
-      image: 'https://image.api.playstation.com/vulcan/ap/rnd/202103/1012/MrFkXNqIim5naTegtJuGDTEb.png',
+      image: 'https://cdn.akamai.steamstatic.com/steam/apps/936790/capsule_616x353.jpg?t=1666713640',
       title: 'Life is Strange True Colors',
       genres: ['Глубокий сюжет', 'Протагонистка'],
       video: 'https://www.youtube.com/embed/b6CkzwVAr0M',
