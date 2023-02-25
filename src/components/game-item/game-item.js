@@ -21,11 +21,9 @@ export const GameItem = ({ game }) => {
         <div className="game-item" onClick={handleClick}>
             <GameCover image={game.image} />
             <div className="game-item__details">
-                <span className="game-item__titile"><b>{game.title}</b></span>
+                <span className="game-item__titile" style={{color: '#B9F3FC'}}><b>{game.title}</b></span>
                 <div className="game-item__genre">
-                    {game.genres.map((genre) => (
-                        <GameGenre genre={genre} key={genre} />
-                    ))}
+                    {game.genres.map((genre) => (<GameGenre genre={genre} key={genre} />))}
                 </div>
                 <span className="game-description">{game.description}</span>
                 <div className="game-item__buy">
