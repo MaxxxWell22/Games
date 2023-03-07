@@ -9,7 +9,7 @@ const HomePage = () => {
         <div className="home_page">
             <Link className="home_page__child" to="/">{GAMES.map(game => <GameItem game={game} key={game.id} description={game.description} />)}</Link>
         </div>
-    )
-}
+    );
+};
 
 export { HomePage }
