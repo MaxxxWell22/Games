@@ -1,4 +1,4 @@
-import './game-cover.css';
+import './game-cover.scss';
 
 export const GameCover = ({ image = "" }) => {
     return (

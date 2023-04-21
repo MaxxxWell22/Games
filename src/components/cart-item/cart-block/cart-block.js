@@ -5,7 +5,7 @@ import { CartMenu } from "../cart-menu/cart-menu";
 import { useCallback, useState } from "react";
 import { ItemsInCart } from "../../items-in-cart/items-in-cart";
 import { useNavigate } from 'react-router-dom';
-import './cart-block.css';
+import './cart-block.scss';
 
 export const CartBlock = () => {
     const [isCartMenuVisible, setIsCartMenuVisible] = useState(false);

@@ -1,7 +1,7 @@
 import { calcTotalPrice } from "../../Header/utils";
 import { Button } from '../../button/button';
 import { CartItem } from "../cart-item";
-import './cart-menu.css';
+import './cart-menu.scss';
 
 export const CartMenu = ({ items, onClick }) => {
     return (

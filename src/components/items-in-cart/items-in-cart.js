@@ -1,4 +1,4 @@
-import './items-in-cart.css';
+import './items-in-cart.scss';
 
 export const ItemsInCart = ({quantity = 0}) => {
     return quantity > 0 ? (

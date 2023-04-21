@@ -1,4 +1,4 @@
-import './game-genre.css';
+import './game-genre.scss';
 
 export const GameGenre = ({ genre }) => {
     return (

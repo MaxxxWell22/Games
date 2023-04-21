@@ -1,0 +1,55 @@
+.game-page {
+    margin-top: 50px;
+
+    .game-page__title {
+        margin-bottom: 30px;
+    }
+
+    .content {
+        display: flex;
+
+
+        .game-page__right {
+            width: 30%;
+
+            .game-page__buy-game {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 20px;
+            }
+
+            .p-description {
+                font-size: 17px;
+            }
+        }
+
+        .game-page__left {
+            width: 70%;
+        }
+
+    }
+}
+
+@media(max-width: 900px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .game-page__left {
+            width: 100% !important;
+            height: 55vh !important;
+
+            .video {
+                width: 100% !important;
+                height: 55vh !important;
+            }
+        }
+
+        .game-page__right {
+            margin-top: 50px;
+            width: 70% !important;
+        }
+    }
+}

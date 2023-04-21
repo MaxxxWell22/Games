@@ -5,14 +5,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 7px 12px;
-}
 
-.cart-item__price {
-    display: flex;
-    align-items: center;
-}
-
-.cart-item__delete-icon {
-    margin-left: 5px;
-    cursor: pointer;
+    .cart-item__price {
+        display: flex;
+        align-items: center;
+    }
 }
