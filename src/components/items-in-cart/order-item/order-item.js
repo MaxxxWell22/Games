@@ -1,25 +1,29 @@
 import { FiXCircle } from "react-icons/fi";
 import { useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
+import { setCurrentGame } from "../../../redux/games/games";
 import { deleteItemFromCart } from '../../../redux/cart/reducer';
-import './order-item.css';
+import './order-item.scss'
 
 const OrderItem = ({ game }) => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-    const handleClick = () => {
+    const handleDelete = () => {
         dispatch(deleteItemFromCart(game.id));
     }
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        dispatch(setCurrentGame(game));
+        navigate(`/app/${game.title}`);
+    };
 
     return (
         <div className='order-item'>
             <div style={{ display: 'flex' }}>
-                <div className='order-item__cover'>
-                    <img style={{
-                        width: 'calc(200px + 9 * (100vw/1900))',
-                        height: 'calc(100px + 9 * (100vw/1900))',
-                        borderTopLeftRadius: '15px',
-                        borderTopRightRadius: '15px'
-                    }} className='imageCart' src={game.image} />
+                <div className='order-item__cover' onClick={handleClick}>
+                    <img src={game.image} />
                 </div>
                 <div className='order-item__title'>
                     <span style={{ fontSize: 'calc(15px + 9 * (100vw/1900))' }}>{game.title}</span>
@@ -31,7 +35,7 @@ const OrderItem = ({ game }) => {
                     <FiXCircle
                         size={25}
                         className='cart-item__delete-icon'
-                        onClick={handleClick}
+                        onClick={handleDelete}
                     />
                 </div>
             </div>

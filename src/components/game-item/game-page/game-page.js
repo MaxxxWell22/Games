@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { GameGenre } from '../game-genre/game-genre';
 import { GameCover } from '../game-image/game-cover';
 import { GameBuy } from '../game-buy/game-buy';
-import './game-page.css';
+import './game-page.scss';
 
 const GamePage = () => {
     const game = useSelector(state => state.game.currentGame);

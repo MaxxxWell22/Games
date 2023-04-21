@@ -1,8 +1,0 @@
-.home_page{
-    flex-wrap: wrap;
-};
-
-.home_page__child {
-    display: flex;
-    justify-content: center;
-};

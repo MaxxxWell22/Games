@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 import { calcTotalPrice } from '../../components/Header/utils';
 import { OrderItem } from '../../components/items-in-cart/order-item/order-item';
 

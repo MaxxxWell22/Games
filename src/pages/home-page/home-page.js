@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { GameItem } from "../../components/game-item/game-item";
 import { GAMES } from "./data/data";
-import './home-page.css';
+import './home-page.scss';
 
 const HomePage = () => {
     return (

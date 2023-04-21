@@ -5,7 +5,7 @@ import { GameCover } from "./game-image/game-cover";
 import { GameBuy } from "./game-buy/game-buy";
 import { GameGenre } from "./game-genre/game-genre";
 import { setCurrentGame } from "../../redux/games/games";
-import './game-item.css';
+import './game-item.scss';
 
 export const GameItem = ({ game }) => {
     const navigate = useNavigate();
